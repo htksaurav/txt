@@ -149,6 +149,10 @@ app.post("/login", function(req, res){
     });
 });
 
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 3000;
+}
 app.listen(3000, function(){
-    console.log("app is listening on port 3000");
+    console.log("app is Started succesfully");
 });
